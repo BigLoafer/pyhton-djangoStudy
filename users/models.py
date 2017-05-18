@@ -46,7 +46,3 @@ class Banner(models.Model):
         verbose_name='轮播图'
         verbose_name_plural=verbose_name
 
-
-class Test(models.Model):
-    name=models.CharField(max_length=30,verbose_name='测试')
-    age=models.CharField(max_length=30,verbose_name='测')
