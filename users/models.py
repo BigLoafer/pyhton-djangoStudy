@@ -17,7 +17,7 @@ class UserInfo(AbstractUser):
     image=models.ImageField(upload_to='image/%Y/%m', default=u'image/default.png', max_length=100)
 
     class Meta:
-        verbose_name='用户信息'
+        verbose_name=u'用户信息'
         verbose_name_plural=verbose_name
 
     def __unicode__(self):
@@ -36,13 +36,13 @@ class EmailVerifyRecord(models.Model):
 
 
 class Banner(models.Model):
-    title=models.CharField(max_length=100,verbose_name='标题')
-    image=models.ImageField(upload_to='banner/%Y/%m',verbose_name='轮播图' ,max_length=200)
-    url=models.URLField(max_length=200, verbose_name='访问地址')
-    index=models.IntegerField(default=100,verbose_name='顺序')
-    addTime=models.DateTimeField(default=datetime.now,verbose_name='添加时间')
+    title=models.CharField(max_length=100,verbose_name=u'标题')
+    image=models.ImageField(upload_to='banner/%Y/%m',verbose_name=u'轮播图' ,max_length=200)
+    url=models.URLField(max_length=200, verbose_name=u'访问地址')
+    index=models.IntegerField(default=100,verbose_name=u'顺序')
+    addTime=models.DateTimeField(default=datetime.now,verbose_name=u'添加时间')
 
     class Meta:
-        verbose_name='轮播图'
+        verbose_name=u'轮播图'
         verbose_name_plural=verbose_name
 
