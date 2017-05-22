@@ -5,7 +5,8 @@ import views
 
 urlpatterns = [
     url(r'^xadmin/', xadmin.site.urls),
-    url(r'^index/$',views.index,name='index'),
-    url(r'^register/$',views.user_register,name='register'),
-    url(r'^login/$',views.user_login,name='login'),
+    url(r'^index/$',views.IndexView.as_view(), name='index'),
+    url(r'^register/$',views.RegistView.as_view(), name='register'),
+    url(r'^login/$',views.LoginView.as_view(), name='login'),
+    url(r'^forget/$',views.ForgetPwdView.as_view(), name='forget'),
 ]

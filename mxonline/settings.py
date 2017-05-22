@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'organization',
     'operation',
     'xadmin',
-    'crispy_forms'
+    'crispy_forms',
+    'captcha'
 ]
 AUTH_USER_MODEL='users.UserInfo'
 
@@ -68,6 +69,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.core.context_processors.media'
             ],
         },
     },
@@ -136,3 +138,14 @@ STATICFILES_DIRS=(
 
 DEBUG = True
 ALLOWED_HOSTS = ['127.0.0.1','192.168.0.102','localhost']
+
+EMAIL_HOST='smtp.sina.com'
+EMAIL_PORT=25
+EMAIL_HOST_USER='projectsedu@sina.com'
+EMAIL_HOST_PASSWORD='admin123'
+EMAIL_USE_TLS=False
+EMAIL_FROM='projectsedu@sina.com'
+
+MEDIA_URL='/media/'
+MEDIA_ROOT=os.path.join(BASE_DIR , 'media')
+
