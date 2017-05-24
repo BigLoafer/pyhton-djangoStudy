@@ -20,6 +20,8 @@ class EmailVerifyRecordAdmin(object):
     list_display=['code','send_type','email','send_time']
     list_filter=['code','send_type','email','send_time']
     search_fields=['code','send_type','email']
+    model_icon='fa fa-user'
+    list_editable=['code','send_type']
 
 
 class BannerAdmin(object):

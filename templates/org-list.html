@@ -230,29 +230,13 @@
 		 <div class="pageturn">
             <ul class="pagelist">
 
+                    <li class="active"><a href="?page=1">1</a></li>
 
+                    <li><a href="?page=2" class="page">2</a></li>
 
-
-
-                            <li class="active"><a href="?page=1">1</a></li>
-
-
-
-
-
-                            <li><a href="?page=2" class="page">2</a></li>
-
-
-
-
-
-                            <li><a href="?page=3" class="page">3</a></li>
-
-
-
+                    <li><a href="?page=3" class="page">3</a></li>
 
                     <li class="long"><a href="?page=2">下一页</a></li>
-
 
             </ul>
         </div>
@@ -261,6 +245,7 @@
 	<div class="right companyright">
 			<div class="head">我要学习</div>
 			<form class="rightform" id="jsStayForm">
+                {% csrf_token %}
 				<div>
                     <img src="/static/images/rightform1.png"/>
                     <input type="text" name="name" id="companyName" placeholder="名字" maxlength="25" />
@@ -275,7 +260,6 @@
                 </div>
                 <p class="error company-tips" id="jsCompanyTips"></p>
 				<input class="btn" type="text" id="jsStayBtn" value="立即咨询 >" />
-            <input type='hidden' name='csrfmiddlewaretoken' value='5I2SlleZJOMUX9QbwYLUIAOshdrdpRcy' />
             </form>
 		</div>
 

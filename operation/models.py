@@ -8,6 +8,7 @@ from django.db import models
 from users.models import UserInfo
 from course.models import Course
 
+
 class UserAsk(models.Model):
     name=models.CharField(max_length=50,verbose_name=u"姓名")
     mobile=models.CharField(max_length=11,verbose_name=u'手机')

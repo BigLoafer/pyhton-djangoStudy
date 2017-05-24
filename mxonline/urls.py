@@ -15,6 +15,8 @@ Including another URLconf
 """
 from django.conf.urls import url,include
 from django.views.generic import TemplateView
+from mxonline.settings import MEDIA_ROOT
+from django.views.static import serve
 
 urlpatterns = [
     url(r'^home/', include('users.urls')),
@@ -22,6 +24,8 @@ urlpatterns = [
     url(r'^operation/', include('operation.urls')),
     url(r'^organization', include('organization.urls')),
     url(r'^captcha/', include('captcha.urls')),
+    url(r'^media/(?P<path>.*)$', serve,{"document_root": MEDIA_ROOT}),
+    url(r'^ueditor/',include('DjangoUeditor.urls' )),
     # url(r'^index/$',TemplateView.as_view(template_name='index.html'),name='index'),
     # url(r'^login/$',TemplateView.as_view(template_name='login.html'),name='login'),
     # url(r'^register/$',TemplateView.as_view(template_name='register.html'),name='register'),

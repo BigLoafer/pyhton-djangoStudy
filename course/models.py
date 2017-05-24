@@ -4,13 +4,16 @@ from datetime import datetime
 
 from django.db import models
 
+from DjangoUeditor.models import UEditorField
+
 # Create your models here.
 
 
 class Course(models.Model):
     name=models.CharField(max_length=100,verbose_name=u'课程名')
     desc=models.CharField(max_length=500,verbose_name=u'课程描述')
-    detail=models.TextField(verbose_name=u'课程详情')
+    detail=UEditorField(verbose_name=u'课程详情', width=1000, height=300, imagePath="image/ueditor", filePath="image/ueditor",
+         upload_settings={"imageMaxSize":1204000},default='')
     degree=models.CharField(choices=(('cj',u'初级'),('zj',u'中级'),('gj',u'高级')),max_length=10,verbose_name=u'难度')
     learn_time=models.IntegerField(default=0,verbose_name=u'学习时长(分钟)')
     students=models.IntegerField(default=0,verbose_name=u'学习人数')

@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'operation',
     'xadmin',
     'crispy_forms',
-    'captcha'
+    'captcha',
+    'DjangoUeditor'
 ]
 AUTH_USER_MODEL='users.UserInfo'
 
@@ -69,7 +70,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'django.core.context_processors.media'
+                'django.core.context_processors.media',
             ],
         },
     },
